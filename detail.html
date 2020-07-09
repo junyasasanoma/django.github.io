@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+{% block content %}
+    <h1>paiza bbs</h1>
+
+    <p>{{message}}</p>
+
+    <p>{{article.user_name}}</p>
+    <p>{{article.content}}</p>
+    <div>
+        <a  class="btn btn-outline-primary" href="{% url 'bbs:index' %}">一覧</a>
+        <a  class="btn btn-outline-primary" href="{% url 'bbs:edit' article.id %}">編集</a>
+        <a  class="btn btn-outline-secondary" href="{% url 'bbs:delete' article.id %}">削除</a>
+    </div>
+{% endblock %}
